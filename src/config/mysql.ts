@@ -1,8 +1,8 @@
 export default {
   development: {
     USER: 'root',
-    PASSWORD: 'password',
-    DB: 'blog',
+    PASSWORD: 'zxcvbnm123',
+    DB: 'schema_name',
     HOST: 'localhost',
     PORT: 3306,
     SYNC: false

@@ -22,7 +22,7 @@ class Authorization extends AbstractResponse {
         return super.authorization(ctx, 'Request header authorization cannot be empty')
       }
       const authorization = ctx.header.authorization
-      const scheme = authorization.substr(0, 6)
+      const scheme = authorization.substring(0, 6)
       if (scheme != 'Bearer') {
         return super.authorization(ctx, 'Wrong authorization bearer')
       }

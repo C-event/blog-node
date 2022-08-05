@@ -187,28 +187,28 @@ export default class ArticleController extends AbstractResponse {
    *              type: object
    *              properties:
    */
-  @get()
-  @query({
-    id: {
-      required: true
-    }
-  })
-  @catchError()
-  async get (ctx: ParameterizedContext) {
-    const params = ctx.request.query
-    const res: any = await Article.findByPk(params.id, {
-      include: [{
-        model: User,
-        attributes: ['id', 'nickname'],
-      }, {
-        model: Label,
-        attributes: ['id', 'name'],
-      }]
-    })
-    // add view count
-    res?.increment('view_count')
-    super.success(ctx, res, '获取详情成功')
-  }
+  // @get()
+  // @query({
+  //   id: {
+  //     required: true
+  //   }
+  // })
+  // @catchError()
+  // async get (ctx: ParameterizedContext) {
+  //   const params = ctx.request.query
+  //   const res: any = await Article.findByPk(params.id, {
+  //     include: [{
+  //       model: User,
+  //       attributes: ['id', 'nickname'],
+  //     }, {
+  //       model: Label,
+  //       attributes: ['id', 'name'],
+  //     }]
+  //   })
+  //   // add view count
+  //   res?.increment('view_count')
+  //   super.success(ctx, res, '获取详情成功')
+  // }
 
   /**
    * @swagger

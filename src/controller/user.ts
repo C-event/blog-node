@@ -103,10 +103,11 @@ class UserController extends AbstractResponse {
   async registry (ctx: ParameterizedContext) {
     const params = ctx.request.body
     console.log('--------', ctx.ip, ctx.request.ip)
+    console.log('params',params);
     const res = await User.create({
       nickname: params.nickname,
       password: crypted.md5(params.password),
-      ip: '::ffff:183.195.15.111',
+      ip:  ctx.ip,
       avatar: params.avatar,
       email: params.email,
       age: params.age,

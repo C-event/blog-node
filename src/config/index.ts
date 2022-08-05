@@ -11,7 +11,7 @@ const defaultConfig = {
   JWT_CONFIG: JWTConfig,
   MYSQL_CONFIG: MySqlConfig[env],
   QINIU_CONFIG: QiniuConfig[env],
-  PORT: 8080,
+  PORT: 8088,
   OPEN_API_DOC: true,
 }
 
